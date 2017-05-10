@@ -10,27 +10,50 @@
 }
 */
 
-@font-face {
-    font-family: 'carbontyperegular';
-    src: url('carbontype-webfont.woff2') format('woff2'),
-         url('carbontype-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+
+html	{
+	height: 100%;
 }
 
 body	{
+	height: 100%;
+}
+
+#grid-wrapper	{
+	height: 100%;
 	display: grid;
-	grid-template-columns: 7fr 1fr 1fr 1fr;
+	grid-template-columns: 1fr 8fr 1fr 1fr 1fr;
 	grid-gap: 0;
 }
 
 .vertical-section	{
-	.section-title-text	{
-		font-family: 'carbontyperegular';
-		font-size: 36pt;
-		color: $headcolour;
+	background-image: url(/home/cspanw74/Documents/Resume/portf-page/Assets/Images/harry.jpg);
+	position: relative;
+	padding-top: 50px;
+	overflow: hidden;
+	/*border: solid 1pt black;*/
+
+	.section-title	{
+			position: absolute;
+			bottom: 80%;
+			right: 70%;
+			z-index: 1;
 		transform: rotate(270deg);
+		transform-origin: right top 0;
+		/*float: left;*/
+			
+		.section-title-text	{
+			font-family: 'carbontyperegular';
+			font-size: 36pt;
+			color: $headcolour;
+			margin: 0;
+		}
+	}
+/*	.open	{
+		transform: rotate(90deg);
 		transform-origin: left top 0;
+	}
+	.closed	{
 		text-align: right;
 	}
-}
+*/}
