@@ -17,13 +17,13 @@ $(document).ready(function () {
 				fractionString = "1fr 8fr 1fr 1fr 1fr";
 				break;
 			case 2:
-				fractionString = "1fr 1fr 8fr 1fr 1fr";
+				fractionString = "1fr 2fr 7fr 1fr 1fr";
 				break;
 			case 3:
-				fractionString = "1fr 1fr 1fr 8fr 1fr";
+				fractionString = "1fr 2fr 1fr 7fr 1fr";
 				break;
 			case 4:
-				fractionString = "1fr 1fr 1fr 1fr 8fr"
+				fractionString = "1fr 2fr 1fr 1fr 7fr"
 		}
 		$("#grid-wrapper").css({"grid-template-columns":fractionString});
 	}

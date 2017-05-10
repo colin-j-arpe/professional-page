@@ -17,27 +17,42 @@ html	{
 
 body	{
 	height: 100%;
+	font-family: 'Georgia', serif;
+
+	a	{
+		&:link, &:hover, &:active, &:visited	{
+			text-decoration: none;
+			color: black;
+		}
+	}
+}
+
+h3	{
+	font-weight: normal;
 }
 
 #grid-wrapper	{
 	height: 100%;
 	display: grid;
 	grid-template-columns: 1fr 8fr 1fr 1fr 1fr;
+	transition: grid-template-columns 5s;
 	grid-gap: 0;
+	background-image: url(/home/cspanw74/Documents/Resume/portf-page/Assets/Images/harry.jpg);
+	/*z-index: -3;*/
 }
 
 .vertical-section	{
-	background-image: url(/home/cspanw74/Documents/Resume/portf-page/Assets/Images/harry.jpg);
 	position: relative;
 	padding-top: 50px;
 	overflow: hidden;
+	/*z-index: -2;*/
 	/*border: solid 1pt black;*/
 
 	.section-title	{
 			position: absolute;
 			bottom: 80%;
 			right: 70%;
-			z-index: 1;
+			/*z-index: -1;*/
 		transform: rotate(270deg);
 		transform-origin: right top 0;
 		/*float: left;*/
@@ -45,15 +60,34 @@ body	{
 		.section-title-text	{
 			font-family: 'carbontyperegular';
 			font-size: 36pt;
-			color: $headcolour;
+			color: $titletext;
 			margin: 0;
 		}
 	}
-/*	.open	{
-		transform: rotate(90deg);
-		transform-origin: left top 0;
+}
+
+.content	{
+	z-index: 1;
+}
+
+.head-text	{
+	font-family: 'com4t_fine';
+	font-size: 16pt;
+	color: $headertext;
+}
+
+#download-button	{
+	display: inline-block;
+	font-weight: bold;
+	color: $headertext;
+	background-color: $titletext;
+	padding: 2px 8px;
+	border-radius: 20%;
+
+	a 	{
+		&:link, &:hover, &:active, &:visited	{
+			text-decoration: none;
+			color: $headertext;
+		}
 	}
-	.closed	{
-		text-align: right;
-	}
-*/}
+}

@@ -3,6 +3,11 @@
   src: url("/home/cspanw74/Documents/Resume/portf-page/Assets/Fonts/carbontype-webfont.woff2") format("woff2"), url("/home/cspanw74/Documents/Resume/portf-page/Assets/Fonts/carbontype-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal; }
+@font-face {
+  font-family: 'com4t_fine';
+  src: url("/home/cspanw74/Documents/Resume/portf-page/Assets/Fonts/com4f_rg-webfont.woff2") format("woff2"), url("/home/cspanw74/Documents/Resume/portf-page/Assets/Fonts/com4f_rg-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
 #text1 {
   color: red; }
 
@@ -16,33 +21,35 @@ html {
   height: 100%; }
 
 body {
-  height: 100%; }
+  height: 100%;
+  font-family: 'Georgia', serif; }
+  body a:link, body a:hover, body a:active, body a:visited {
+    text-decoration: none;
+    color: black; }
+
+h3 {
+  font-weight: normal; }
 
 #grid-wrapper {
   height: 100%;
   display: grid;
   grid-template-columns: 1fr 8fr 1fr 1fr 1fr;
-  grid-gap: 0; }
+  transition: grid-template-columns 5s;
+  grid-gap: 0;
+  background-image: url(/home/cspanw74/Documents/Resume/portf-page/Assets/Images/harry.jpg);
+  /*z-index: -3;*/ }
 
 .vertical-section {
-  background-image: url(/home/cspanw74/Documents/Resume/portf-page/Assets/Images/harry.jpg);
   position: relative;
   padding-top: 50px;
   overflow: hidden;
-  /*border: solid 1pt black;*/
-  /*	.open	{
-  		transform: rotate(90deg);
-  		transform-origin: left top 0;
-  	}
-  	.closed	{
-  		text-align: right;
-  	}
-  */ }
+  /*z-index: -2;*/
+  /*border: solid 1pt black;*/ }
   .vertical-section .section-title {
     position: absolute;
     bottom: 80%;
     right: 70%;
-    z-index: 1;
+    /*z-index: -1;*/
     transform: rotate(270deg);
     transform-origin: right top 0;
     /*float: left;*/ }
@@ -51,5 +58,24 @@ body {
       font-size: 36pt;
       color: #dd8888;
       margin: 0; }
+
+.content {
+  z-index: 1; }
+
+.head-text {
+  font-family: 'com4t_fine';
+  font-size: 16pt;
+  color: #111166; }
+
+#download-button {
+  display: inline-block;
+  font-weight: bold;
+  color: #111166;
+  background-color: #dd8888;
+  padding: 2px 8px;
+  border-radius: 20%; }
+  #download-button a:link, #download-button a:hover, #download-button a:active, #download-button a:visited {
+    text-decoration: none;
+    color: #111166; }
 
 /*# sourceMappingURL=styles.css.map */
