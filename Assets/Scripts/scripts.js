@@ -6,6 +6,7 @@ $(document).ready(function () {
 				$(".section-title-text").eq(i).addClass("open");
 			}
 			moveGrid(i);
+			showContent(i);
 		});
 	});
 
@@ -26,6 +27,18 @@ $(document).ready(function () {
 				fractionString = "1fr 2fr 1fr 1fr 7fr"
 		}
 		$("#grid-wrapper").css({"grid-template-columns":fractionString});
+	}
+
+	function showContent(i)	{
+		sectionContents = $(".content");
+console.log(sectionContents.length);
+console.log(sectionContents[0]);
+		for (var j = 0; j < sectionContents.length; j++) {
+			$(".content").eq(j).css({"display":"none"});
+		}
+		if (i > 1) {
+			$(".content").eq(i-2).css({"display":"block"});
+		}
 	}
 
 });		//	end of document ready function

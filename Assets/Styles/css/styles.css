@@ -60,7 +60,10 @@ h3 {
       margin: 0; }
 
 .content {
-  z-index: 1; }
+  z-index: 1;
+  display: none; }
+  .content #main {
+    display: block; }
 
 .head-text {
   font-family: 'com4t_fine';

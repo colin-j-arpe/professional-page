@@ -68,6 +68,11 @@ h3	{
 
 .content	{
 	z-index: 1;
+	display: none;
+
+	#main 	{
+		display: block;
+	}
 }
 
 .head-text	{
