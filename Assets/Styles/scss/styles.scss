@@ -38,7 +38,7 @@ h3	{
 	transition: grid-template-columns 5s;
 	grid-gap: 0;
 	background-image: url(/home/cspanw74/Documents/Resume/portf-page/Assets/Images/harry.jpg);
-	/*z-index: -3;*/
+	z-index: -3;
 }
 
 .vertical-section	{
@@ -51,8 +51,8 @@ h3	{
 	.section-title	{
 			position: absolute;
 			bottom: 80%;
-			right: 70%;
-			/*z-index: -1;*/
+			right: 80%;
+			z-index: 1;
 		transform: rotate(270deg);
 		transform-origin: right top 0;
 		/*float: left;*/
@@ -67,7 +67,7 @@ h3	{
 }
 
 .content	{
-	z-index: 1;
+	z-index: 10;
 	display: none;
 
 	#main 	{

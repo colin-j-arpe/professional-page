@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body style="font-family: monospace;">
+<p>10 FOR I = 1 TO 100<br>
+20 T = I/3<br>
+30 T% = I/3<br>
+40 F = I/5<br>
+50 F% = I/5<br>
+60 GOSUB 100<br>
+70 NEXT I<br>
+80 END<br>
+100 IF T=T% THEN GOSUB 200<br>
+110 IF T<>T% THEN GOSUB 300<br>
+120 RETURN<br>
+200 IF F=F% THEN ? "WOZZBUZZ"<br>
+210 IF F<>F% THEN ? "WOZZ"<br>
+220 RETURN<br>
+300 IF F=F% THEN ? "BUZZ"<br>
+310 IF F<>F% THEN ? I<br>
+320 RETURN</p>
+</body>
+</html>
