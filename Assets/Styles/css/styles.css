@@ -30,7 +30,7 @@ body {
 h3 {
   font-family: 'com4t_fine';
   font-size: 20pt;
-  color: #111166;
+  color: #111188;
   font-weight: bold; }
 
 #grid-wrapper {
@@ -72,12 +72,12 @@ h3 {
 #download-button {
   display: inline-block;
   font-weight: bold;
-  color: #111166;
+  color: #111188;
   background-color: #dd8888;
   padding: 2px 8px;
   border-radius: 20%; }
   #download-button a:link, #download-button a:hover, #download-button a:active, #download-button a:visited {
     text-decoration: none;
-    color: #111166; }
+    color: #111188; }
 
 /*# sourceMappingURL=styles.css.map */
