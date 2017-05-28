@@ -28,7 +28,10 @@ body	{
 }
 
 h3	{
-	font-weight: normal;
+	font-family: 'com4t_fine';
+	font-size: 20pt;
+	color: $headertext;
+	font-weight: bold;
 }
 
 #grid-wrapper	{
@@ -69,16 +72,11 @@ h3	{
 .content	{
 	z-index: 10;
 	display: none;
+	width: 480px;
 
 	#main 	{
 		display: block;
 	}
-}
-
-.head-text	{
-	font-family: 'com4t_fine';
-	font-size: 16pt;
-	color: $headertext;
 }
 
 #download-button	{
