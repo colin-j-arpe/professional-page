@@ -1,18 +1,18 @@
 @font-face {
     font-family: 'carbontyperegular';
-    src: url('/home/cspanw74/Documents/Resume/portf-page/Assets/Fonts/carbontype-webfont.woff2') format('woff2'),
-         url('/home/cspanw74/Documents/Resume/portf-page/Assets/Fonts/carbontype-webfont.woff') format('woff');
+    src: url('Fonts/carbontype-webfont.woff2') format('woff2'),
+         url('Fonts/carbontype-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'com4t_fine';
-    src: url('/home/cspanw74/Documents/Resume/portf-page/Assets/Fonts/com4f_rg-webfont.woff2') format('woff2'),
-         url('/home/cspanw74/Documents/Resume/portf-page/Assets/Fonts/com4f_rg-webfont.woff') format('woff');
+    src: url('Fonts/com4f_rg-webfont.woff2') format('woff2'),
+         url('Fonts/com4f_rg-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 $titletext: #dd8888;
-$headertext: #111188;
+$headertext: #000055;

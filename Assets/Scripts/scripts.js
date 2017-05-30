@@ -1,38 +1,33 @@
+var openSection = 1;
+
 $(document).ready(function () {
-	$(".section-title").each(function(i)	{
+	
+	var sections = $(".vertical-section");
+	var titles = $(".section-title");
+
+
+	titles.each(function(i)	{
 		$(this).on("click", function()	{
+console.log("clicked " + i);
 			if (i > 0) {
-				$(".open").addClass("closed").removeClass("open");
-				$(".section-title-text").eq(i).addClass("open");
+				// $(".open").addClass("closed").removeClass("open");
+				// $(".section-title-text").eq(i).addClass("open");
+				moveGrid(i);
+				showContent(i);
 			}
-			moveGrid(i);
-			showContent(i);
 		});
 	});
 
 	function moveGrid (i)	{
-		switch(i)	{
-			case 0:
-				break;
-			case 1:
-				fractionString = "1fr 8fr 1fr 1fr 1fr";
-				break;
-			case 2:
-				fractionString = "1fr 2fr 7fr 1fr 1fr";
-				break;
-			case 3:
-				fractionString = "1fr 2fr 1fr 7fr 1fr";
-				break;
-			case 4:
-				fractionString = "1fr 2fr 1fr 1fr 7fr"
-		}
-		$("#grid-wrapper").css({"grid-template-columns":fractionString});
+		sections[i].setAttribute("style","width:48%");
+		sections[openSection].setAttribute("style","width:12%");
+		titles[openSection].setAttribute("style","z-index:1");
+		titles[i].setAttribute("style","z-index:-1");
+		openSection = i;
 	}
 
 	function showContent(i)	{
 		sectionContents = $(".content");
-console.log(sectionContents.length);
-console.log(sectionContents[0]);
 		for (var j = 0; j < sectionContents.length; j++) {
 			$(".content").eq(j).css({"display":"none"});
 		}
