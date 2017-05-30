@@ -4,6 +4,7 @@ $(document).ready(function () {
 	
 	var sections = $(".vertical-section");
 	var titles = $(".section-title");
+	var sectionContents = $(".content");
 
 
 	titles.each(function(i)	{
@@ -12,11 +13,23 @@ console.log("clicked " + i);
 			if (i > 0) {
 				// $(".open").addClass("closed").removeClass("open");
 				// $(".section-title-text").eq(i).addClass("open");
-				moveGrid(i);
-				showContent(i);
+				hideContent(i);
+				setTimeout(function()	{
+					moveGrid(i);
+				}, 1000);
+				setTimeout(function()	{
+					showContent(i);
+				}, 1000);
 			}
 		});
 	});
+
+	function hideContent(i)	{
+		for (var j = 0; j < sectionContents.length; j++) {
+			$(".content").eq(j).hide(1000);
+			// $(".content").eq(j).css({"display":"none"});
+		}
+	}
 
 	function moveGrid (i)	{
 		sections[i].setAttribute("style","width:48%");
@@ -27,12 +40,9 @@ console.log("clicked " + i);
 	}
 
 	function showContent(i)	{
-		sectionContents = $(".content");
-		for (var j = 0; j < sectionContents.length; j++) {
-			$(".content").eq(j).css({"display":"none"});
-		}
 		if (i > 1) {
-			$(".content").eq(i-2).css({"display":"block"});
+			// $(".content").eq(i-2).css({"display":"block"});
+			$(".content").eq(i-2).show(1000);
 		}
 	}
 

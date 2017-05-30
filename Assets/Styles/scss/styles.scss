@@ -58,7 +58,7 @@ h3	{
 	display: inline-block;
 	width: 12%;
 	height: 182px;
-	transition: width 2s;
+	transition: width 1s;
 	padding: 50px 0px;
 	margin: 0;
 	border: 1px solid black;
@@ -95,6 +95,8 @@ h3	{
 	z-index: 10;
 	display: none;
 	width: 480px;
+	height: auto;
+	transition: height 1s linear;
 
 	#main 	{
 		display: block;
