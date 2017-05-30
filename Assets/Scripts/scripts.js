@@ -1,7 +1,7 @@
 var openSection = 1;
 
 $(document).ready(function () {
-	
+	var grid = $("#grid-wrapper");
 	var sections = $(".vertical-section");
 	var titles = $(".section-title");
 
@@ -19,10 +19,16 @@ console.log("clicked " + i);
 	});
 
 	function moveGrid (i)	{
+console.log(grid);
+		var gridString = "1fr 1fr 1fr 1fr 1fr";
+		gridString[i*4] = '4';
+		grid.css({"grid-template-columns":gridString});
+
 		sections[i].setAttribute("style","width:48%");
 		sections[openSection].setAttribute("style","width:12%");
 		titles[openSection].setAttribute("style","z-index:1");
 		titles[i].setAttribute("style","z-index:-1");
+
 		openSection = i;
 	}
 
