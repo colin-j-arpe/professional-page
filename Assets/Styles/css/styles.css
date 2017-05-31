@@ -21,7 +21,7 @@ html {
   height: 100%; }
 
 body {
-  height: 1000px;
+  /*height: 1000px;*/
   font-family: 'Georgia', serif; }
   body a:link, body a:hover, body a:active, body a:visited {
     text-decoration: none;
@@ -32,6 +32,9 @@ h3 {
   font-size: 20pt;
   color: #000055;
   font-weight: bold; }
+
+h4 {
+  margin-bottom: 0; }
 
 /*#grid-wrapper	{
 	height: 100%;
@@ -47,7 +50,7 @@ h3 {
 .vertical-wrapper {
   display: inline;
   /*position: absolute;*/
-  max-height: 1000px; }
+  /*max-height: 1000px;*/ }
 
 .vertical-section {
   position: relative;
@@ -100,6 +103,11 @@ h3 {
   transition: height 1s linear; }
   .content #main {
     display: block; }
+  .content p {
+    margin-top: 0; }
+
+.content-subsection {
+  display: none; }
 
 #download-button {
   display: inline-block;

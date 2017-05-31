@@ -1,10 +1,13 @@
 var openSection = 0;
+var openSubsection = -1;
 
 $(document).ready(function () {
 	
 	var sections = $(".vertical-section");
 	var titles = $(".section-title");
 	var sectionContents = $(".content");
+	var headers = $(".content-header");
+	var subsections = $(".content-subsection");
 
 
 	titles.each(function(i)	{
@@ -19,7 +22,7 @@ console.log("clicked " + i);
 				// }, 1000);
 				setTimeout(function()	{
 					showContent(i);
-				}, 1000);
+				}, 500);
 				openSection = i;
 			}
 		});
@@ -27,7 +30,7 @@ console.log("clicked " + i);
 
 	function hideContent(i)	{
 		for (var j = 0; j < sectionContents.length; j++) {
-			$(".content").eq(openSection - 1).hide(1000);
+			$(".content").eq(openSection - 1).hide(500);
 			// $(".content").eq(j).css({"display":"none"});
 		}
 	}
@@ -45,6 +48,28 @@ console.log("clicked " + i);
 			// $(".content").eq(i-2).css({"display":"block"});
 			$(".content").eq(i - 1).show(1000);
 		// }
+	}
+
+	headers.each(function(i)	{
+		$(this).on("click", function()	{
+console.log(i);
+console.log($(".content-subsection").eq(i).attr("display"));
+			if (i != openSubsection)	{
+				hideSubsections();
+				showSubsection(i);
+				openSubsection = i;
+			}
+		});
+	});
+
+	function hideSubsections()	{
+		subsections.each(function()	{
+			$(this).hide(500);
+		});
+	}
+
+	function showSubsection(i)	{
+		$(".content-subsection").eq(i).show(1000);
 	}
 
 });		//	end of document ready function
