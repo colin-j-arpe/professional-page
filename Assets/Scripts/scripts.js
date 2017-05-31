@@ -20,9 +20,9 @@ console.log("clicked " + i);
 				// setTimeout(function()	{
 				// 	moveGrid(i);
 				// }, 1000);
-				setTimeout(function()	{
+				// setTimeout(function()	{
 					showContent(i);
-				}, 500);
+				// }, 500);
 				openSection = i;
 			}
 		});

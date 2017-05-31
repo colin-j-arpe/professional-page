@@ -61,11 +61,11 @@ h4	{
 	/*top: 0;*/
 	display: inline-block;
 	width: 20%;
-	height: 177px;
+	height: 238px;
 	transition: width 1s;
 	/*padding: 50px 0px;*/
 	margin: 0;
-	border: 1px solid black;
+	/*border: 1px solid black;*/
 	/*overflow: hidden;*/
 	/*z-index: -2;*/
 	/*border: solid 1pt black;*/
@@ -73,12 +73,12 @@ h4	{
 }
 
 .section-title	{
-	border: 1px solid black;
+	/*border: 1px solid black;*/
 	position: absolute;
 	display: inline-block;		
 	top: 10px;
 	right: 25%;
-	z-index: 1;
+	/*z-index: -1;*/
 	width: 500px;
 	overflow: visible;
 	transform: rotate(270deg);
@@ -91,7 +91,7 @@ h4	{
 		color: $titletext;
 		margin: 0;
 		overflow: visible;
-		z-index: -1;
+		/*z-index: -1;*/
 	}
 }
 
@@ -109,7 +109,7 @@ h4	{
 }
 
 .content	{
-	/*z-index: 10;*/
+	z-index: 1;
 	display: none;
 	width: 480px;
 	height: auto;
@@ -117,6 +117,10 @@ h4	{
 
 	#main 	{
 		display: block;
+	}
+
+	.content-header	{
+		margin-bottom: 12px;
 	}
 
 	p 	{

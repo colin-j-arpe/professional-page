@@ -57,22 +57,22 @@ h4 {
   /*top: 0;*/
   display: inline-block;
   width: 20%;
-  height: 177px;
+  height: 238px;
   transition: width 1s;
   /*padding: 50px 0px;*/
   margin: 0;
-  border: 1px solid black;
+  /*border: 1px solid black;*/
   /*overflow: hidden;*/
   /*z-index: -2;*/
   /*border: solid 1pt black;*/ }
 
 .section-title {
-  border: 1px solid black;
+  /*border: 1px solid black;*/
   position: absolute;
   display: inline-block;
   top: 10px;
   right: 25%;
-  z-index: 1;
+  /*z-index: -1;*/
   width: 500px;
   overflow: visible;
   transform: rotate(270deg);
@@ -84,7 +84,7 @@ h4 {
     color: #dd8888;
     margin: 0;
     overflow: visible;
-    z-index: -1; }
+    /*z-index: -1;*/ }
 
 #home-content {
   z-index: 2; }
@@ -96,13 +96,15 @@ h4 {
   float: right; }
 
 .content {
-  /*z-index: 10;*/
+  z-index: 1;
   display: none;
   width: 480px;
   height: auto;
   transition: height 1s linear; }
   .content #main {
     display: block; }
+  .content .content-header {
+    margin-bottom: 12px; }
   .content p {
     margin-top: 0; }
 
