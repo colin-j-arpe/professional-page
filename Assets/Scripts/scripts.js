@@ -1,4 +1,4 @@
-var openSection = 1;
+var openSection = 0;
 
 $(document).ready(function () {
 	
@@ -14,19 +14,20 @@ console.log("clicked " + i);
 				// $(".open").addClass("closed").removeClass("open");
 				// $(".section-title-text").eq(i).addClass("open");
 				hideContent(i);
-				setTimeout(function()	{
-					moveGrid(i);
-				}, 1000);
+				// setTimeout(function()	{
+				// 	moveGrid(i);
+				// }, 1000);
 				setTimeout(function()	{
 					showContent(i);
 				}, 1000);
+				openSection = i;
 			}
 		});
 	});
 
 	function hideContent(i)	{
 		for (var j = 0; j < sectionContents.length; j++) {
-			$(".content").eq(j).hide(1000);
+			$(".content").eq(openSection - 1).hide(1000);
 			// $(".content").eq(j).css({"display":"none"});
 		}
 	}
@@ -40,10 +41,10 @@ console.log("clicked " + i);
 	}
 
 	function showContent(i)	{
-		if (i > 1) {
+		// if (i > 1) {
 			// $(".content").eq(i-2).css({"display":"block"});
-			$(".content").eq(i-2).show(1000);
-		}
+			$(".content").eq(i - 1).show(1000);
+		// }
 	}
 
 });		//	end of document ready function
