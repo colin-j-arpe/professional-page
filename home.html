@@ -10,7 +10,7 @@
 	<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
 	<link rel="stylesheet" type="text/css" href="Assets/Styles/css/styles.css">
 </head>
-<body style="background-image: url(Assets/Images/harry.jpg)">
+<body style="background-image: url(Assets/Images/harry.png)">
 	<div id="vertical-wrapper">
 		<div class="vertical-section" style="width: 36%">
 			<div class="section-title" style="z-index: -1; width: 480px">
@@ -21,7 +21,7 @@
 				<h3 class="home-text">Philadelphia, PA</h3>
 				<p class="home-text"><a href="tel:+1-646-250-0946">646-250-0946</a></p>
 				<p class="home-text"><a href="mailto:colin.j.arpe@outlook.com">colin.j.arpe@outlook.com</a></p>
-				<p id="download-button" class="home-text"><a target="_blank" href="Assets/Documents/ArpeC resume Jun2017.pdf">download resum&eacute;</a></p>
+				<p id="download-button" class="home-text"><a target="_blank" href="Assets/Documents/ArpeC-resume-Dec2017.pdf">download resum&eacute;</a></p>
 			</div>
 		</div>
 <!--	<div class="vertical-section" style="width: 48%">
@@ -53,7 +53,7 @@
 				<h4>Web development</h4>
 				<p>HTML, XML, CSS, Sass, JavaScript, Ruby, Rails</p>
 				<h4>Programming</h4>
-				<p>Java, C, C#, x86 Assembler, Apple <a href="#" onclick="window.open('Assets/Documents/a2bfb.html','WozzBuzz','height=300,width=300,top=300,left=600');return false;">][</a> BASIC, Git</p>
+				<p>Java, Python, C, C#, x86 Assembler, Apple <a href="#" onclick="window.open('Assets/Documents/a2bfb.html','WozzBuzz','height=300,width=300,top=300,left=600');return false;">][</a> BASIC, Git</p>
 				<h4>Graphics and DTP</h4>
 				<p>Adobe CS (Photoshop, Illustrator), MS Office (Word, Excel, Powerpoint), Mapinfo</p>
 			</div>
@@ -93,10 +93,10 @@
                 <p>Basic calculator using bit operations</p>
                 <div class="project-description content-subsection">
                     <a target="_blank" href="Java-apps/BitCalc.jar"><img src="Assets/Images/bC-ss.png" width="250px"></a>
-                    <p>bitCalc is a simple calculator application that performs the four basic operations on whole numbers.  The program in coded in Java using the NetBeans IDE.</p>
-                    <p>For each equation, the program creates an object containing the two operands and the result, as well as methods for the four operations.  Within the Equation class, there are no numbers or mathematical operations (exception: there are several <i>for</i> loops which employ an integer index and increment it using the <i>++</i> operation).  Instead, all of the numbers are stored in an array of boolean values representing each number in binary.  The calculations are then performed using the logic gates AND, OR, XOR and NOT.</p>
+                    <p>bitCalc is a simple calculator application that performs the four basic arithmetic operations on whole or floating-point numbers.  The program in coded in Java using the NetBeans IDE.  The floating-point equation class was coded using test-driven development with JUnit4.</p>
+                    <p>For each equation, the program creates an object containing the two operands, the result, and methods for the four operations.  Within the Equation classes (integer and float), there are no number variables or native mathematical operations (exception: array indices and <i>for</i>-loop incrementation).  Instead, each of the numbers is stored in an array of 32 boolean variables representing the value as a 32-bit binary number.  The calculations are then performed using the logic gates AND, OR, XOR and NOT.</p>
                     <p>The .jar file can be downloaded by clicking on the image above; it requires JRE to run.  For help with this, click <b><a href="#" onclick="window.open('Assets/Documents/java-instruc.html','Using the JRE','height=300,width=500,top=300,left=500');return false;">here</a></b>.</p>
-                    <p>The code for the Equation class, which contains the functions for the bit operations, can be viewed <b><a target="_blank" href="https://github.com/colin-j-arpe/bit-op-calculator/blob/master/src/bitcalc/Equation.java">here</a></b>.</p>
+                    <p>The code for the Equation class, which contains the functions for the integer bit operations, can be viewed <b><a target="_blank" href="https://github.com/colin-j-arpe/bit-op-calculator/blob/master/src/bitcalc/Equation.java">here</a></b>.  The JUnit tests used in developing the FloatEquation class can be viewed <b><a target="_blank" href="https://github.com/colin-j-arpe/bit-op-calculator/blob/master/test/bitcalc/FloatEquationTest.java">here</a></b>.</p>
                 </div>
                 <h3 class="content-header">lightsOut!</h3>
                 <p>Simple and maddening puzzle game</p>
